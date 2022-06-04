@@ -75,3 +75,9 @@ class MyFilter(BaseFilter):
                     self.ham_words.update(clear_content)
 
         self.is_trained = True
+
+if __name__ == '__main__':
+    print('go')
+    c = MyFilter()
+    c.train("1")
+    c.test("2")

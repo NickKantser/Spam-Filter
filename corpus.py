@@ -11,6 +11,6 @@ class Corpus:
         for filename in filenames:
             if filename[0] == "!":
                 continue
-            with open(self.path + "/" + filename, "r", encoding="utf-8") as file:
+            with open(os.path.join(self.path, filename), "r", encoding="utf-8") as file:
                 email_body = file.read()
                 yield filename, email_body
